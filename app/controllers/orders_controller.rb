@@ -54,6 +54,7 @@ class OrdersController < ApplicationController
     end
     order.save!
     order
+    UserMailer.with(user: @user).order_email 
   end
 
 end
