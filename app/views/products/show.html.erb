@@ -23,8 +23,17 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
-     
-      <h3>Reviews</h3>
+        <dl class="dl-horizontal">
+      <h4>Post a review</h4>
+        <%= form_for(@review, url: product_reviews_path(@product)) do |r| %>
+          <dt>Rating: </dt>
+          <dd><%= r.select :rating, [1, 2, 3, 4, 5] %></dd>
+          <dt>Comment: </dt>
+          <dd> <%= r.text_field :description %>
+          <%= r.submit "Submit" %> </dd>
+          <% end %>
+          </dl>
+      <h4>Reviews</h4>
       <% @reviews.each do |review| %>
       <dl class="dl-horizontal">
       <dt>name</dt>
@@ -40,9 +49,4 @@
  
   </article>
 
- <%= form_for(@review, url: product_reviews_path(@product)) do |r| %>
-  Rating: <%= r.select :rating, [1, 2, 3, 4, 5] %>
-  Comment: <%= r.text_field :description %>
-  <%= r.submit "Submit" %>
-  <% end %>
 </section>
