@@ -132,5 +132,50 @@ cat3.products.create!({
   price: 2_483.75
 })
 
+puts "Creating authentics comments"
+
+Review.create!(
+  product_id: 1,
+  user_id: 1, 
+  description: 'I love this product it is a really great one I never use because it is not good enough',
+  rating: 5
+  )
+
+Review.create!(
+  product_id: 1,
+  user_id: 2, 
+  description: 'I feel my life is better since I use this',
+  rating: 5
+  )
+
+Review.create!(
+  product_id: 1,
+  user_id: 3, 
+  description: 'Replaced my old car efficiently',
+  rating: 5
+  )
+
+  Review.create!(
+    product_id: 2,
+    user_id: 1, 
+    description: 'I love this product it is a really great one I never use because it is not good enough',
+    rating: 5
+    )
+  
+  Review.create!(
+    product_id: 2,
+    user_id: 2, 
+    description: 'I feel my life is better since I use this',
+    rating: 5
+    )
+  
+  Review.create!(
+    product_id: 2,
+    user_id: 3, 
+    description: 'Replaced my old car efficiently',
+    rating: 5
+    )
+
+
 
 puts "DONE!"
