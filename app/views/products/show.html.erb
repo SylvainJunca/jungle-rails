@@ -41,7 +41,7 @@
   </article>
 
  <%= form_for(@review, url: product_reviews_path(@product)) do |r| %>
-  Rating: <%= r.text_field :rating %>
+  Rating: <%= r.select :rating, [1, 2, 3, 4, 5] %>
   Comment: <%= r.text_field :description %>
   <%= r.submit "Submit" %>
   <% end %>
