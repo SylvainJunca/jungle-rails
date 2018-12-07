@@ -176,6 +176,26 @@ Review.create!(
     rating: 5
     )
 
+    Review.create!(
+      product_id: 3,
+      user_id: 1, 
+      description: 'buying this was a worst decision than propose to my wife',
+      rating: 1
+      )
+    
+    Review.create!(
+      product_id: 3,
+      user_id: 2, 
+      description: 'I feel my life is worse since I use this',
+      rating: 2
+      )
+    
+    Review.create!(
+      product_id: 3,
+      user_id: 3, 
+      description: 'Did not replaced my old car efficiently',
+      rating: 2
+      )
 
 
 puts "DONE!"
