@@ -40,7 +40,9 @@
  
   </article>
 
-     
-
-   
+ <%= form_for :review, url: {action: "create"} do |r| %>
+  Rating: <%= r.text_field :rating %>
+  Comment: <%= r.text_field :description %>
+  <%= r.submit "Submit" %>
+  <% end %>
 </section>
