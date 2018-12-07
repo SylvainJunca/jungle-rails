@@ -34,7 +34,7 @@
           <% end %>
           </dl>
       <h4>Reviews</h4>
-      <% @reviews.each do |review| %>
+      <% @reviews.reverse.each do |review| %>
       <dl class="dl-horizontal">
       <dt>name</dt>
           <dd><%= review.user_id %></dd>
