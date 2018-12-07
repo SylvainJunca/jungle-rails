@@ -23,6 +23,8 @@
           <dt>Price</dt>
           <dd><%= @product.price %></dd>
         </dl>
+
+        <% if current_user%>
         <dl class="dl-horizontal">
       <h4>Post a review</h4>
         <%= form_for([@product, @review]) do |r| %>
@@ -33,6 +35,7 @@
           <%= r.submit "Submit" %> </dd>
           <% end %>
           </dl>
+          <% end %>
       <h4>Reviews</h4>
       <% @reviews.reverse.each do |review| %>
       <dl class="dl-horizontal">
